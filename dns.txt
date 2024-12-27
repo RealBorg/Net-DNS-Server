@@ -1,0 +1,14 @@
+version.bind CH TXT "Net::DNS::Server"
+version.bind IN TXT "Net::DNS::Server"
+
+example.com IN SOA
+example.com IN TXT "v=spf1 a mx -all"
+
+ns1.example.com IN A 192.0.2.1
+ns1.example.com IN AAAA 2001:db8::1
+example.com IN A 192.0.2.1
+example.com IN AAAA 2001:db8::1
+example.com IN MX 10 ns1.example.com
+example.com IN NS ns1.example.com
+www.example.com IN A 192.0.2.1
+www.example.com IN AAAA 2001:db8::1
